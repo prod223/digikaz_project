@@ -35,10 +35,16 @@ module.exports = {
         },
         // Extend existing colors with gold palette
         gray: {
-          900: '#0a0a0a',
-          800: '#1a1a1a',
-          700: '#2a2a2a',
-          600: '#3a3a3a',
+          50: '#f9fafb',
+          100: '#f3f4f6',
+          200: '#e5e7eb',
+          300: '#d1d5db',
+          400: '#9ca3af',
+          500: '#6b7280',
+          600: '#4b5563',
+          700: '#374151',
+          800: '#1f2937',
+          900: '#111827',
         },
         gold: {
           50: '#fefdf8',
@@ -92,6 +98,22 @@ module.exports = {
         'gold-hover': '0 6px 20px rgba(212, 175, 55, 0.4)',
         'card': '0 8px 25px rgba(212, 175, 55, 0.15)',
         'gold-glow': '0 0 20px rgba(212, 175, 55, 0.5)',
+      },
+      // Ajout des classes utilitaires manquantes
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '128': '32rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      },
+      zIndex: {
+        '60': '60',
+        '70': '70',
+        '80': '80',
+        '90': '90',
+        '100': '100',
       },
     },
   },
