@@ -1,26 +1,122 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    @apply bg-white dark:bg-black text-black dark:text-white transition-colors duration-300;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Utility Classes - Thème Or Élégant */
+  .text-gradient {
+    @apply bg-gradient-to-r from-gold-500 to-gold-400 bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-gold-500 to-gold-400 text-white border-none rounded-xl px-6 py-3 font-semibold cursor-pointer transition-all duration-300 hover:-translate-y-0.5 shadow-gold hover:shadow-gold-hover;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-black dark:text-white border-2 border-gold-500 rounded-xl px-5 py-2.5 font-semibold cursor-pointer transition-all duration-300 hover:bg-gold-500 hover:text-white hover:-translate-y-0.5;
+  }
+
+  .card {
+    @apply bg-gray-100 dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:border-gold-500 hover:-translate-y-1 hover:shadow-card;
+  }
+
+  .glass {
+    @apply bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-gray-200/20 dark:border-white/10;
+  }
+
+  /* Classes spécifiques aux thèmes */
+  .bg-theme-primary {
+    @apply bg-white dark:bg-black;
+  }
+
+  .bg-theme-secondary {
+    @apply bg-gray-100 dark:bg-gray-900;
+  }
+
+  .bg-theme-card {
+    @apply bg-white dark:bg-gray-800;
+  }
+
+  .text-theme-primary {
+    @apply text-black dark:text-white;
+  }
+
+  .text-theme-secondary {
+    @apply text-gray-600 dark:text-gray-300;
+  }
+
+  .border-theme {
+    @apply border-gray-200 dark:border-gray-700;
+  }
+
+  /* Line clamp utility */
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  /* Scrollbar hide utility */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+/* Custom Scrollbar - Thème Or */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gold-500 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gold-400;
 }
