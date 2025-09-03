@@ -15,6 +15,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* Hero Section - Two Column with Collage */}
       <section className="relative overflow-hidden pt-16 md:pt-24">
         {/* Background */}
@@ -35,10 +36,10 @@ export default function Home() {
               <p className="text-lg md:text-xl text-theme-secondary mb-10 max-w-xl">
                 Explorez les meilleures offres proches de votre université. Swipez, matchez et réservez en toute simplicité.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="btn-primary text-base md:text-lg px-8 py-3">Commencer maintenant</button>
-                <button className="btn-secondary text-base md:text-lg px-8 py-3">Voir les logements</button>
-              </div>
+                             <div className="flex flex-col sm:flex-row gap-4">
+                  <a href="#comment-ca-marche" className="btn-primary text-base md:text-lg px-8 py-3 inline-block text-center">Comment ça marche</a>
+                  <a href="#nos-tarifs" className="btn-secondary text-base md:text-lg px-8 py-3 inline-block text-center">Nos tarifs</a>
+                </div>
 
               {/* Trust */}
               <div className="mt-10 grid grid-cols-3 gap-6 max-w-md">
@@ -75,10 +76,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      
-
-     
 
       {/* Properties Section */}
       <PropertiesSection />
@@ -160,6 +157,186 @@ export default function Home() {
               <p className="text-theme-secondary leading-relaxed">
                 Algorithme intelligent qui apprend vos préférences pour vous proposer les logements parfaits.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Comment ça marche Section */}
+      <section id="comment-ca-marche" className="py-24 px-4 bg-white dark:bg-black">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-black text-gradient mb-6">
+              Comment ça marche ?
+            </h2>
+            <p className="text-xl text-theme-secondary max-w-3xl mx-auto">
+              En quelques étapes simples, trouvez votre logement idéal ou louez votre bien en toute sécurité.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Pour les étudiants */}
+            <div className="space-y-8">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold text-theme-primary mb-2">Pour les étudiants</h3>
+                <div className="w-24 h-1 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto rounded-full"></div>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                    1
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-theme-primary mb-2">Créez votre profil</h4>
+                    <p className="text-theme-secondary">Inscrivez-vous gratuitement et complétez votre profil avec vos informations et préférences de logement.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                    2
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-theme-primary mb-2">Recherchez intelligemment</h4>
+                    <p className="text-theme-secondary">Utilisez nos filtres avancés et notre IA pour trouver le logement qui correspond parfaitement à vos critères.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                    3
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-theme-primary mb-2">Contactez et visitez</h4>
+                    <p className="text-theme-secondary">Échangez directement avec le propriétaire via notre messagerie sécurisée et organisez une visite.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Pour les bailleurs */}
+            <div className="space-y-8">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold text-theme-primary mb-2">Pour les bailleurs</h3>
+                <div className="w-24 h-1 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto rounded-full"></div>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                    1
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-theme-primary mb-2">Créez votre compte</h4>
+                    <p className="text-theme-secondary">Inscrivez-vous en tant que bailleur, vérifiez votre identité et accédez à votre tableau de bord.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                    2
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-theme-primary mb-2">Publiez vos annonces</h4>
+                    <p className="text-theme-secondary">Ajoutez vos biens avec photos HD, descriptions détaillées et gérez les disponibilités en temps réel.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                    3
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-theme-primary mb-2">Gérez facilement</h4>
+                    <p className="text-theme-secondary">Recevez des demandes d'étudiants vérifiés, communiquez et gérez vos contrats depuis votre dashboard.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tarification Section */}
+      <section id="nos-tarifs" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-black">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-black text-gradient mb-6">
+              Nos tarifs
+            </h2>
+            <p className="text-xl text-theme-secondary max-w-3xl mx-auto">
+              Simple et transparent. Digikaz est entièrement gratuit pour les étudiants. Les bailleurs bénéficient d'outils premium pour optimiser leurs locations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Étudiants - Gratuit */}
+            <div className="relative p-8 rounded-3xl bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-white/20 dark:border-gray-700/50 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-theme-primary mb-2">Étudiants</h3>
+                <div className="text-4xl font-black text-gold-500 mb-2">Gratuit</div>
+                <div className="text-theme-secondary mb-6">Pour toujours</div>
+                
+                <ul className="space-y-3 mb-8 text-left">
+                  <li className="flex items-center gap-3">
+                    <span className="text-gold-500 text-xl">✅</span>
+                    <span className="text-theme-secondary">Recherche illimitée</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-gold-500 text-xl">✅</span>
+                    <span className="text-theme-secondary">Messagerie intégrée</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-gold-500 text-xl">✅</span>
+                    <span className="text-theme-secondary">Profil vérifié</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-gold-500 text-xl">✅</span>
+                    <span className="text-theme-secondary">Support client</span>
+                  </li>
+                </ul>
+
+                <button className="w-full btn-primary">
+                  Commencer gratuitement
+                </button>
+              </div>
+            </div>
+
+            {/* Bailleurs - Premium */}
+            <div className="relative p-8 rounded-3xl bg-gradient-to-br from-gold-500 to-gold-600 text-white border border-gold-400 hover:shadow-gold-glow transition-all duration-500 hover:scale-105">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-white text-gold-600 px-4 py-2 rounded-full text-sm font-bold">Populaire</span>
+              </div>
+              
+              <div className="text-center">
+                <h3 className="text-2xl font-bold mb-2">Bailleurs</h3>
+                <div className="text-4xl font-black mb-2">29€</div>
+                <div className="text-gold-100 mb-6">Par mois</div>
+                
+                <ul className="space-y-3 mb-8 text-left">
+                  <li className="flex items-center gap-3">
+                    <span className="text-white text-xl">✅</span>
+                    <span className="text-gold-100">Annonces illimitées</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-white text-xl">✅</span>
+                    <span className="text-gold-100">Analytics avancées</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-white text-xl">✅</span>
+                    <span className="text-gold-100">Gestion des contrats</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-white text-xl">✅</span>
+                    <span className="text-gold-100">Support prioritaire</span>
+                  </li>
+                </ul>
+
+                <button className="w-full bg-white text-gold-600 font-bold py-3 px-6 rounded-xl hover:bg-gold-50 transition-all duration-300">
+                  Essai gratuit 14 jours
+                </button>
+              </div>
             </div>
           </div>
         </div>

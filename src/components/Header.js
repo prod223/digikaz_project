@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ThemeToggle from './ThemeToggle';
+import UserNav from './UserNav';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -71,16 +72,7 @@ const Header = () => {
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center space-x-4">
             <ThemeToggle />
-            <Link href="/auth/signin">
-              <button className="btn-secondary">
-                Se connecter
-              </button>
-            </Link>
-            <Link href="/auth/signup">
-              <button className="btn-primary">
-                S'inscrire
-              </button>
-            </Link>
+            <UserNav />
           </div>
 
           {/* Mobile Menu Button */}
@@ -152,16 +144,9 @@ const Header = () => {
               </nav>
               
               <div className="flex flex-col space-y-3 pt-4 border-t border-theme">
-                <Link href="/auth/signin" onClick={() => setIsMobileMenuOpen(false)}>
-                  <button className="btn-secondary w-full">
-                    Se connecter
-                  </button>
-                </Link>
-                <Link href="/auth/signup" onClick={() => setIsMobileMenuOpen(false)}>
-                  <button className="btn-primary w-full">
-                    S'inscrire
-                  </button>
-                </Link>
+                <div className="lg:hidden">
+                  <UserNav />
+                </div>
               </div>
             </div>
           </div>
